@@ -1,0 +1,47 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Recovery.LobbyPage"
+             Title="LobbyPage"
+             BackgroundColor="#000643">
+
+    <ScrollView> 
+    <StackLayout Padding="20">
+        <Label Text="Tiempo de sobriedad" FontAttributes="Bold" FontSize="Large" TextColor="CadetBlue"/>
+        <Label Text="Te has mantenido sobrio durante:" TextColor="LightGray" FontSize="Medium"/>
+
+        
+        <StackLayout HorizontalOptions="Center" Spacing="10" Margin="0,20">
+            
+            <Frame Padding="10" BackgroundColor="#333333" CornerRadius="10" HasShadow="True">
+                <Label x:Name="DaysLabel" FontSize="Medium" TextColor="NavajoWhite" HorizontalOptions="Center"/>
+            </Frame>
+
+            
+            <Frame Padding="10" BackgroundColor="#333333" CornerRadius="10" HasShadow="True">
+                <Label x:Name="HoursLabel" FontSize="Medium" TextColor="CornflowerBlue" HorizontalOptions="Center" />
+            </Frame>
+
+            
+            <Frame Padding="10" BackgroundColor="#333333" CornerRadius="10" HasShadow="True">
+                <Label x:Name="MinutesLabel" FontSize="Medium" TextColor="CadetBlue" HorizontalOptions="Center" />
+            </Frame>
+
+            
+            <Frame Padding="10" BackgroundColor="#333333" CornerRadius="10" HasShadow="True">
+                    <Label x:Name="SecondsLabel" FontSize="Medium" TextColor="#9F92FF" HorizontalOptions="Center" />
+            </Frame>
+        </StackLayout>
+
+        
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,20" Spacing="15">
+                <Button Text="Compartir" Clicked="Compartir_Clicked" BackgroundColor="#1E90FF" TextColor="White" FontAttributes="Bold"/>
+                <Button Text="Mensaje" Clicked="Mensaje_Clicked" BackgroundColor="#1E90FF" TextColor="White" FontAttributes="Bold"/>
+                <Button Text="Reiniciar" Clicked="Reiniciar_Clicked" BackgroundColor="#1E90FF" TextColor="White" FontAttributes="Bold"/>
+        </StackLayout>
+    </StackLayout>
+   </ScrollView>
+</ContentPage>
+
+
+
+

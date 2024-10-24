@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Recovery.WelcomePage"
+             Title="WelcomePage"
+             BackgroundColor="#000643">
+
+    <ScrollView> 
+    <StackLayout VerticalOptions="Center" Padding="20" BackgroundColor="#000643" >
+       
+        <Grid>
+            
+            <Image Source="fondo7.webp" 
+               Aspect="AspectFill" WidthRequest="500" HeightRequest="700"
+               HorizontalOptions="FillAndExpand" 
+               VerticalOptions="FillAndExpand"/>
+
+            <Frame BackgroundColor="LightGray" Padding="25" CornerRadius="20" HasShadow="True" VerticalOptions="Start" WidthRequest="260" HeightRequest="180" Margin="0,20,0,0">
+
+                <StackLayout>
+                    <Label Text="En primer lugar, ¡Felicidades!"                       
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"  
+                       TextColor="Black"
+                       FontSize="24"
+                       FontAttributes="Bold"
+                       LineBreakMode="WordWrap"
+                       MaxLines="10"/>
+                    <Label Text="Acabas de dar un gran paso en el camino hacia la sobriedad."
+                       TextColor="Black"
+                       FontSize="14"
+                       VerticalTextAlignment="Center"
+                       HorizontalTextAlignment="Center"
+                       LineBreakMode="WordWrap"
+                       MaxLines="10" Padding="5"/>
+                </StackLayout>
+
+            </Frame>
+        </Grid>
+      
+        <StackLayout VerticalOptions="EndAndExpand" Padding="20" Spacing="10">
+            <Button Text="Empezar" BackgroundColor="#1E90FF" TextColor="White" CornerRadius="5" WidthRequest="250" Clicked="Button_Clicked"/>
+            <StackLayout HorizontalOptions="Center">
+                <Label Text="¿Ya tiene una cuenta?" HorizontalOptions="Center" TextColor="Gray"/>
+                <Button Text="Iniciar sesión" BackgroundColor="Transparent" TextColor="LightSkyBlue" HorizontalOptions="Center" 
+                    BorderColor="#1E90FF" BorderWidth="1.5" WidthRequest="170" Margin="0,10" Clicked="Button_Clicked_1"/>
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+  </ScrollView>
+</ContentPage>

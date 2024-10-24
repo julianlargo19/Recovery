@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Recovery.CreateUserPage"
+             Title="CreateUserPage"
+             BackgroundColor="LightGray">
+
+
+    <ScrollView>    
+        <StackLayout Padding="20" Spacing="20">
+
+            <Label Text="Crear una Cuenta" 
+               FontAttributes="Bold"
+               FontSize="Large" 
+               HorizontalOptions="Center" 
+               TextColor="Black" />
+
+            
+            <Frame Padding="15" CornerRadius="10" HasShadow="True" BackgroundColor="White">
+                <StackLayout>
+                    <Label Text="Elige un nombre de usuario" 
+                       FontAttributes="Bold" 
+                       TextColor="Black" 
+                       FontSize="Medium" />
+                    <Entry Placeholder="Nombre de usuario" 
+                       x:Name="UsernameEntry" 
+                       TextColor="Black"
+                       PlaceholderColor="DarkGray"
+                       FontSize="Medium" />
+                    <Label Text="*Tu nombre de usuario se mostrará públicamente." 
+                       FontSize="Small" 
+                       TextColor="red" />
+                </StackLayout>
+            </Frame>
+
+           
+            <Frame Padding="15" CornerRadius="10" HasShadow="True" BackgroundColor="White">
+                <StackLayout>
+                    <Label Text="Elige una contraseña" 
+                       FontAttributes="Bold" 
+                       TextColor="Black" 
+                       FontSize="Medium"/>
+                    <Entry Placeholder="Contraseña" 
+                       IsPassword="True"
+                       x:Name="PasswordEntry" 
+                       TextColor="Black"
+                       PlaceholderColor="DarkGray"
+                       FontSize="Medium" />
+                    <Label Text="*Tu contraseña debe tener al menos 8 caracteres." 
+                       FontSize="Small" 
+                       TextColor="Red" />
+                </StackLayout>
+            </Frame>
+
+           
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <CheckBox x:Name="TermsCheckBox" />
+                <Label Text="Acepto los" FontSize="Small" TextColor="#333" />
+                <Label Text=" Términos de servicio" TextColor="#007AFF" FontSize="Small" />
+                <Label Text=" y " FontSize="Small" TextColor="#333" />
+                <Label Text=" Política de privacidad" TextColor="#007AFF" FontSize="Small" />
+            </StackLayout>
+
+            
+            <Button Text="Siguiente" Clicked="Button_Clicked" 
+                    BackgroundColor="#1E90FF" 
+                    TextColor="White" CornerRadius="5" 
+                    HorizontalOptions="CenterAndExpand" 
+                    VerticalOptions="CenterAndExpand" 
+                    WidthRequest="250" Margin="0,0,0,60"
+                    Command="{Binding OnNextCommand}"
+                    IsEnabled="{Binding IsNextButtonEnabled}" />
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

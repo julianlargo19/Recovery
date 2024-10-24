@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=System.Runtime"
+             x:Class="Recovery.TrackStartPage"
+             Title="TrackStartPage"
+             BackgroundColor="LightGray"
+             Padding="15">
+
+    <ScrollView>
+        <VerticalStackLayout>
+
+            <StackLayout Padding="20">
+                <Label Text="¿Cuándo quieres empezar a hacer el seguimiento?"
+                       FontSize="Medium"
+                       TextColor="Black" 
+                       FontAttributes="Bold"
+                       VerticalOptions="Start" />
+
+                <Image Source="startrack.png"
+                       Aspect="AspectFill" 
+                       WidthRequest="300" 
+                       HeightRequest="300"
+                       HorizontalOptions="FillAndExpand" 
+                       VerticalOptions="FillAndExpand"
+                       Margin="0,70"/>
+
+
+                <DatePicker Date="{x:Static sys:DateTime.Now}" 
+                            Format="dd/MM/yyyy"
+                            VerticalOptions="Start" HorizontalOptions="Center"
+                            Margin="0,30,0,0" 
+                            BackgroundColor="black"/>
+
+                <Label Text="*Las fechas de inicio futuras pueden ser cualquier fecha entre mañana y 30 días en el futuro." Padding="10"
+                       FontSize="Small"
+                       TextColor="Red"
+                       VerticalOptions="Start" HorizontalOptions="Center"
+                       Margin="0,20,0,10" />
+
+                <Button Text="Siguiente" 
+                        IsEnabled="True" 
+                        BackgroundColor="#1E90FF" TextColor="White" 
+                        CornerRadius="5"
+                        HorizontalOptions="CenterAndExpand" 
+                        VerticalOptions="CenterAndExpand" 
+                        WidthRequest="250" Margin="30"
+                        Clicked="Button_Clicked"/>
+            </StackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
+

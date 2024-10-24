@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Recovery.DailyPromisePage"
+             Title="DailyPromisePage"
+             BackgroundColor="LightGray">
+
+    <ScrollView> 
+    <StackLayout Padding="20">
+
+        
+        <Label Text="Confirma tu promesa diaria y revisa las horas"
+               FontSize="Medium"
+               TextColor="Black"
+               FontAttributes="Bold"
+               Margin="0,20,0,10"/>
+
+       
+        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+            <Label Text="Promesa diaria"
+                   TextColor="CadetBlue"
+                   VerticalOptions="Center"
+                   FontSize="Small"
+                   HorizontalOptions="StartAndExpand" />
+            <TimePicker Time="08:00"
+                        BackgroundColor="Black"
+                        TextColor="White"
+                        HorizontalOptions="End"
+                        VerticalOptions="Center"/>
+        </StackLayout>
+
+        
+        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="0,10,0,0">
+            <Label Text="Revisión diaria"
+                   TextColor="CadetBlue"
+                   VerticalOptions="Center"
+                   FontSize="Small"
+                   HorizontalOptions="StartAndExpand" />
+            <TimePicker Time="20:00"
+                        BackgroundColor="Black"
+                        TextColor="White"
+                        HorizontalOptions="End"
+                        VerticalOptions="Center"/>
+        </StackLayout>
+
+       
+        <Label Text="*Recibirás notificaciones en estos momentos."
+               TextColor="Red"
+               FontSize="Small"
+               HorizontalOptions="Center"
+               VerticalOptions="Start"
+               Margin="0,40,0,20" />
+
+        
+        <Button Text="Siguiente"
+                BackgroundColor="#2196F3"
+                TextColor="White"
+                CornerRadius="5"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="End"
+                WidthRequest="250"
+                Clicked="Button_Clicked"/>
+
+    </StackLayout>
+    </ScrollView>
+</ContentPage>

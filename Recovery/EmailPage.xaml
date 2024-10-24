@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Recovery.EmailPage"
+             Title="EmailPage"
+             BackgroundColor="LightGray">
+
+    <ScrollView> 
+
+    <StackLayout Padding="20">
+        <Label Text="Dirección de Correo Electrónico"
+       FontSize="24" 
+       Margin="50,40"
+       TextColor="Black"
+       FontAttributes="Bold,Italic"
+       HorizontalOptions="Center"
+       VerticalOptions="Center"
+       Padding="10"
+       
+       HorizontalTextAlignment="Center"
+       VerticalTextAlignment="Center"/>
+
+
+        <Frame Padding="0" IsClippedToBounds="True" CornerRadius="20" 
+       HeightRequest="300" WidthRequest="400"
+       HorizontalOptions="Center" VerticalOptions="Center" Margin="0,0,0,100">
+            <Image Source="email2.jpg" 
+           Aspect="AspectFill" 
+           WidthRequest="400" 
+           HeightRequest="300"/>
+        </Frame>
+
+
+
+        <Entry Placeholder="Dirección de correo electrónico" 
+               TextColor="Black" PlaceholderColor="DarkGray"
+               FontSize="Medium"
+               Keyboard="Email"
+               HorizontalOptions="FillAndExpand" Margin="0,0,0,30"/>
+
+       
+        <Label Text="*Debes tener al menos 18 años." 
+               FontSize="Small"
+               TextColor="Red"
+               FontAttributes="Bold" Margin="0,0,0,50"/>
+
+        
+        <Button Text="Siguiente" Clicked="Button_Clicked" IsEnabled="True" BackgroundColor="#1E90FF" TextColor="White" CornerRadius="5" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" 
+                WidthRequest="250" Margin="0,0,0,60"/>
+    </StackLayout>
+    </ScrollView>
+</ContentPage>

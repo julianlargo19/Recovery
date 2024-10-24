@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Recovery.AddictionsListPage"
+             Title="AddictionsListPage">
+
+    <StackLayout Padding="35" BackgroundColor="LightGrey">
+
+        <Label Text="¿De qué te estás volviendo sobrio?"
+               FontSize="Medium"
+               TextColor="Black"
+               FontAttributes="Bold"
+               HorizontalOptions="Start" />
+        
+
+        <Label Text="Puedes añadir más después."
+               FontSize="Small"
+               TextColor="Black"
+               HorizontalOptions="Start" 
+               Padding="25"/>
+        <Button Text="Personalizado" 
+                IsEnabled="True"
+                Clicked="Button_Clicked"
+                BackgroundColor="#1E90FF" 
+                TextColor="White" 
+                CornerRadius="5" 
+                HorizontalOptions="StartAndExpand" 
+                VerticalOptions="StartAndExpand"  
+                WidthRequest="250" 
+                Margin="10,0,0,15"/>
+
+        <ListView x:Name="AddictionListView" 
+                  HasUnevenRows="True"
+                  VerticalOptions="FillAndExpand">
+           
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding .}"  
+                                   TextColor="Black"
+                                   FontSize="18"
+                                   VerticalOptions="Center" Padding="15"
+                                   Margin="0,0,0,15"/>
+                            <StackLayout.Triggers>
+                                <DataTrigger TargetType="StackLayout" Binding="{Binding Source={x:Reference AddictionListView}, Path=SelectedItem}" Value="{Binding .}">
+                                    <Setter Property="BackgroundColor" Value="Aqua"/>
+                                </DataTrigger>
+                            </StackLayout.Triggers>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+           
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Alcohol</x:String>
+                    <x:String>Anfetaminas</x:String>
+                    <x:String>Autolesiones</x:String>
+                    <x:String>Azúcar</x:String>
+                    <x:String>Bebidas alcohólicas</x:String>
+                    <x:String>Bebidas energizantes</x:String>
+                    <x:String>Benzodiazepinas</x:String>
+                    <x:String>Cafeína</x:String>
+                    <x:String>Cannabis</x:String>
+                    <x:String>Carne y Lácteos</x:String>
+                    <x:String>Cerrarse socialmente</x:String>
+                    <x:String>Cerveza</x:String>
+                    <x:String>Comerse el pelo</x:String>
+                    <x:String>Comerse las uñas</x:String>
+                    <x:String>Comida</x:String>
+                    <x:String>Comida Chatarra</x:String>
+                    <x:String>Comida Rápida</x:String>
+                    <x:String>Drogas</x:String>
+                    <x:String>Dulces</x:String>
+                    <x:String>Éxtasis</x:String>
+                    <x:String>Fentanilo</x:String>
+                    <x:String>LSD</x:String>
+                    <x:String>Marihuana</x:String>
+                    <x:String>Tabaco</x:String>
+                    <x:String>Tequila</x:String>
+                    <x:String>Trastorno Alimentario</x:String>
+                    <x:String>Tussi</x:String>
+                    <x:String>Vapear</x:String>
+                    <x:String>Videojuegos</x:String>
+                    <x:String>Vino</x:String>
+                    <x:String>Vodka</x:String>
+                    <x:String>Whisky</x:String>
+                    <x:String>Xanax</x:String>
+                </x:Array>
+            </ListView.ItemsSource>
+        </ListView>
+
+        <Button Text="Siguiente" 
+                IsEnabled="True" 
+                BackgroundColor="#1E90FF" 
+                TextColor="White" 
+                CornerRadius="5" 
+                HorizontalOptions="CenterAndExpand" 
+                VerticalOptions="CenterAndExpand" 
+                WidthRequest="250" 
+                Margin="0,0,0,15"
+                Clicked="Button_Clicked_1"/>
+
+    </StackLayout>
+</ContentPage>

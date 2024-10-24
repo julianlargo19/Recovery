@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Recovery.ReasonSoberPage"
+             Title="ReasonSoberPage"
+             BackgroundColor="LightGray">
+
+    <ScrollView> 
+    
+    <StackLayout Padding="20">
+        <Label Text="Quiero mantenerme sobrio porque ..."
+               FontSize="Medium"
+               TextColor="Black"
+               FontAttributes="Bold"
+               Margin="0,20,0,10" />
+        
+        <Label Text="Intenta describir algo que puedas sentir. Esto puede ser positivo o negativo, lo que sea más poderoso."
+               FontSize="Small"
+               TextColor="CadetBlue"
+               Margin="0,0,0,20" Padding="20"/>
+        
+        <Editor Placeholder="*Escribe aquí..." 
+                TextColor="Black" PlaceholderColor="Red"
+                HeightRequest="150" 
+                BackgroundColor="LightGray" 
+                Margin="0,0,0,20"/>
+        <Button Text="Siguiente" 
+                IsEnabled="True" 
+                BackgroundColor="#1E90FF" TextColor="White" 
+                CornerRadius="5"
+                HorizontalOptions="CenterAndExpand" 
+                VerticalOptions="CenterAndExpand" 
+                WidthRequest="250" Margin="0,0,0,390"
+                Clicked="Button_Clicked"/>
+    </StackLayout>
+    </ScrollView>
+</ContentPage>
